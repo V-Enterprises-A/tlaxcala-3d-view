@@ -1,39 +1,34 @@
-import React, { useRef, useState } from 'react';
-import * as THREE from 'three';
+import { Suspense } from 'react'
+import './App.css'
 
-function ThreeScene() {
-  const canvasRef = useRef(null);
-  const [scene, setScene] = useState(null);
+import { Canvas} from "@react-three/fiber";
+import { Center, ContactShadows, Environment, OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { CapillaJesusDelRio } from "./Churchs/CapillaJesusDelRio";
 
-  React.useEffect(() => {
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({canvas: canvasRef.current});
-    
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({color: 0x00ff00});
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-
-    camera.position.z = 5;
-
-    function animate() {
-      requestAnimationFrame(animate);
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    }
-
-    animate();
-
-    return () => {
-      // Cleanup
-    };
-  }, []);
+function ThreeTest() {
+  
 
   return (
-    <canvas ref={canvasRef} />
-  );
+    <>
+      <Canvas shadows flat gl={{ antialias: true }} camera={{ position: [0, 1.5, 5.5], fov: 60 }}>
+        <PerspectiveCamera makeDefault position={[0, 1.5, 5.5]} fov={60} />
+        <ambientLight intensity={0.1} />
+        <spotLight position={[10, 10, -10]} angle={0.25} penumbra={1} decay={0} intensity={Math.PI/1.5} />
+        <OrbitControls enablePan={ false }  minPolarAngle={0} maxPolarAngle={Math.PI / 2.25} dampingFactor={0.03}/>
+        <Suspense fallback={null}>
+          <Center top position={[-0.5, -0.5, 0]} rotation={[0,2.8,0]}>
+            <CapillaJesusDelRio />
+          </Center>
+        </Suspense>
+
+        <Environment preset='sunset' />
+        <ContactShadows position={[0, -0.5, 0]} opacity={.8} blur={1} far={10} resolution={256} color={"#1C2E3A"} />
+      </Canvas>
+    </>
+  )
 }
 
-export default ThreeScene;
+
+
+
+export default ThreeTest;
