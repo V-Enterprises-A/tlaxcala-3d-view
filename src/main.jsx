@@ -1,12 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import ThreeTest from './ThreeTest.jsx'; './ThreeTest.jsx';
+import PortView from './Portview3D.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-
-    <ThreeTest/>
+    <PortView/> 
   </StrictMode>,
 )
