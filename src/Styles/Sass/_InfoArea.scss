@@ -8,24 +8,29 @@
     margin-right: 50px;
     margin-top: 50px;
     z-index: 1;
+    
+    animation-duration: 2s;
     border-radius: 24px;
     -webkit-border-radius: 24px;
     -moz-border-radius: 24px;
     -ms-border-radius: 24px;
     -o-border-radius: 24px;
+    
 }
 
-.IcoInfo{
+.IcoInfo {
     // width: 100dvw;
     // align-content: center;
     // visibility: hidden;
 }
 
-.Title,.Location{
+.Title,
+.Location {
 
     text-align: center;
 }
-.Data{
+
+.Data {
     text-align: justify;
     margin: 1.5dvw;
 }

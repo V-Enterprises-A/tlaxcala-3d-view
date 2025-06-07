@@ -10,11 +10,11 @@ function PortView() {
 
     return (
         <>
-            <Canvas className='ViewPort' shadows flat gl={{ antialias: true }} camera={{ position: [0, 1.5, 5.5], fov: 60 }} >
+            <Canvas className='ViewPort animate__fadeIn ' shadows flat gl={{ antialias: true }} camera={{ position: [0, 1.5, 5.5], fov: 60 }} >
                 <SetupScene />
-                <Suspense fallback={null}>
+                <Suspense fallback={null} >
                     <Center top position={[-0.5, -0.5, 0]} rotation={[0, 0, 0]}>
-                        <CapillaJesusDelRio scale={0.5} />
+                        <CapillaJesusDelRio scale={0.5}/>
                         {/* <ExSanFrancisco scale={ 0.5 } /> */}
                     </Center>
                 </Suspense>

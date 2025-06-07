@@ -27,6 +27,7 @@ body {
   width: 70dvw;
   /* background-color: #f0f0f0; */
   /* padding: 10px; */
+  animation-duration: 6s;
 }
 
 .InfoBar {
@@ -39,6 +40,7 @@ body {
   margin-right: 50px;
   margin-top: 50px;
   z-index: 1;
+  animation-duration: 2s;
   border-radius: 24px;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
@@ -46,7 +48,8 @@ body {
   -o-border-radius: 24px;
 }
 
-.Title, .Location {
+.Title,
+.Location {
   text-align: center;
 }
 

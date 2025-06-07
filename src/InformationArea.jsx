@@ -1,10 +1,10 @@
 import React from 'react'
-
+import  "animate.css";
 
 function InformationArea() {
 
     return (
-        <div className='InfoBar' >
+        <div className='InfoBar animate__fadeInUp' >
             <div className='IcoInfo'>
                 <img src="./react.svg" alt="" />
             </div>
