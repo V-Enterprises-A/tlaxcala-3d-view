@@ -4,49 +4,100 @@
 }
 
 html,
-body,
-#root {
+body {
   height: 100vh;
   width: 100vw;
 }
 
 #root {
-  position: relative;
   width: 100vw;
   height: 100vh;
+}
+
+#ChurchView {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: row;
-}
-
-body {
   background-color: #3B5A6D;
 }
 
+.ViewPort {
+  width: 70dvw;
+  /* background-color: #f0f0f0; */
+  /* padding: 10px; */
+}
+
+.InfoBar {
+  position: relative;
+  width: 30dvw;
+  height: fit-content;
+  background-color: rgba(235, 234, 209, 0.9);
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+
 @media (min-width: 270px) {
-     #root {
+  #ChurchView {
     flex-direction: column;
+  }
+  .InfoBar {
+    order: 1;
+    width: 65dvw;
+    font-size: 6px;
+  }
+  .ViewPort {
+    order: 2;
+  }
+}
+@media (min-width: 384px) {
+  .InfoBar {
+    order: 1;
+    width: 65dvw;
+    font-size: 9px;
+  }
+}
+@media (min-width: 410px) {
+  .InfoBar {
+    order: 1;
+    width: 70dvw;
+    font-size: 12px;
   }
 }
 /* 
-@media (min-width: 410px) {
-   #root {
-    flex-direction: column;
-  }
-}
 @media (min-width: 600px) {
   #root {
     flex-direction: column;
   }
 }
+*/
 @media (min-width: 768px) {
-  #root {
-    flex-direction: column;
+  .InfoBar {
+    order: 1;
+    width: 85dvw;
+    font-size: medium;
   }
-} */
-
+}
 @media (min-width: 1200px) {
-  #root {
+  #ChurchView {
     flex-direction: row;
+  }
+  .InfoBar {
+    order: 1;
+    width: 30dvw;
+  }
+  .ViewPort {
+    order: 2;
+    width: 70dvw;
   }
 }
 
+/*# sourceMappingURL=styles.css.map */

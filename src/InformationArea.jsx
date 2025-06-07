@@ -1,6 +1,5 @@
 import React from 'react'
 
-import "./Styles/InformationArea.css";
 
 function InformationArea() {
 

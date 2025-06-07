@@ -1,7 +1,4 @@
 import { Suspense } from 'react'
-import './Styles/styles.css'
-import './Styles/Viewport.css'
-
 import { Canvas, useThree } from "@react-three/fiber";
 import { Center, ContactShadows, Environment, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { CapillaJesusDelRio } from "./Churchs/CapillaJesusDelRio";

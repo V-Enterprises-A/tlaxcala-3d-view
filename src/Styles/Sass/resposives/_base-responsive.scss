@@ -1,0 +1,63 @@
+@media (min-width: 270px) {
+  #ChurchView {
+    flex-direction: column;
+  }
+
+  .InfoBar {
+    order: 1;
+    width: 65dvw;
+    font-size: 6px;
+  }
+
+  .ViewPort {
+    order: 2;
+  }
+}
+
+@media (min-width: 384px) {
+  .InfoBar {
+    order: 1;
+    width: 65dvw;
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 410px) {
+
+  .InfoBar {
+    order: 1;
+    width: 70dvw;
+    font-size: 12px;
+  }
+}
+
+/* 
+@media (min-width: 600px) {
+  #root {
+    flex-direction: column;
+  }
+}
+*/
+@media (min-width: 768px) {
+  .InfoBar {
+    order: 1;
+    width: 85dvw;
+    font-size: medium;
+  }
+}
+
+@media (min-width: 1200px) {
+  #ChurchView {
+    flex-direction: row;
+  }
+
+  .InfoBar {
+    order: 1;
+    width: 30dvw;
+  }
+
+  .ViewPort {
+    order: 2;
+    width: 70dvw;
+  }
+}
