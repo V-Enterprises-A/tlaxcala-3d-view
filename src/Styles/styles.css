@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -9,14 +9,44 @@ body,
   height: 100vh;
   width: 100vw;
 }
-#root{
+
+#root {
   position: relative;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: row;
 }
-body{
-background-color: #3B5A6D;
+
+body {
+  background-color: #3B5A6D;
+}
+
+@media (min-width: 384px) {
+     #root {
+    flex-direction: column;
+  }
+}
+/* 
+@media (min-width: 410px) {
+   #root {
+    flex-direction: column;
+  }
+}
+@media (min-width: 600px) {
+  #root {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
+  #root {
+    flex-direction: column;
+  }
+} */
+
+@media (min-width: 1200px) {
+  #root {
+    flex-direction: row;
+  }
 }
 

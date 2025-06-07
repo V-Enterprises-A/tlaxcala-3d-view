@@ -1,5 +1,62 @@
 .InfoBar {
+    position: relative;
     width: 30%;
-    background-color: rgb(235, 234, 209);
+    height: fit-content;
+    background-color: rgba(235, 234, 209, 0.9);
     padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+
+@media (min-width: 384px) {
+    .InfoBar {
+        order: 1;
+        width: 65dvw;
+        font-size: 9px;
+    }
+}
+
+ @media (min-width: 410px) {
+    .InfoBar {
+        order: 1;
+        width: 70dvw;
+        font-size: 12px;
+    }
+
+
+}
+/*
+@media (min-width: 600px) {
+    .InfoBar {
+        order: 1;
+        width: 80dvw;
+    }
+}*/
+@media (min-width: 768px) {
+
+    .InfoBar {
+        order: 1;
+        width: 85dvw;
+        font-size: medium;
+    }
+}
+/*
+@media (min-width: 992px) {
+        .InfoBar {
+        order: 1;
+        width: 85dvw;
+    }
+} */
+
+@media (min-width: 1200px) {
+    .InfoBar {
+        order: 1;
+        width: 30dvw;
+    }
 }

@@ -6,6 +6,7 @@ import { Canvas, useThree } from "@react-three/fiber";
 import { Center, ContactShadows, Environment, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { CapillaJesusDelRio } from "./Churchs/CapillaJesusDelRio";
 import { clamp } from 'three/src/math/MathUtils.js';
+import { ExSanFrancisco } from './Churchs/ExConventoSF';
 
 function PortView() {
 
@@ -15,8 +16,9 @@ function PortView() {
             <Canvas className='ViewPort' shadows flat gl={{ antialias: true }} camera={{ position: [0, 1.5, 5.5], fov: 60 }} >
                 <SetupScene />
                 <Suspense fallback={null}>
-                    <Center top position={[-0.5, -0.5, 0]} rotation={[0, 2.8, 0]}>
+                    <Center top position={[-0.5, -0.5, 0]} rotation={[0, 0, 0]}>
                         <CapillaJesusDelRio />
+                        {/* <ExSanFrancisco scale={ 0.5 } /> */}
                     </Center>
                 </Suspense>
             </Canvas>
