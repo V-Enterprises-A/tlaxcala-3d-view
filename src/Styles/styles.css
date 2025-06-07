@@ -22,7 +22,7 @@ body {
   background-color: #3B5A6D;
 }
 
-@media (min-width: 384px) {
+@media (min-width: 270px) {
      #root {
     flex-direction: column;
   }

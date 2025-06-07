@@ -4,7 +4,7 @@
     /* padding: 10px; */
 }
 
-@media (min-width: 384px) {
+@media (min-width: 270px) {
     .ViewPort {
         order: 2;
     }
