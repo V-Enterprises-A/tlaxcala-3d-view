@@ -1,5 +1,5 @@
 .InfoBar {
-    position: relative;
+    position: fixed;
     width: 30dvw;
     height: fit-content;
     background-color: rgba(235, 234, 209, 0.9);
@@ -7,9 +7,25 @@
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 50px;
+    z-index: 1;
     border-radius: 24px;
     -webkit-border-radius: 24px;
     -moz-border-radius: 24px;
     -ms-border-radius: 24px;
     -o-border-radius: 24px;
+}
+
+.IcoInfo{
+    // width: 100dvw;
+    // align-content: center;
+    // visibility: hidden;
+}
+
+.Title,.Location{
+
+    text-align: center;
+}
+.Data{
+    text-align: justify;
+    margin: 1.5dvw;
 }

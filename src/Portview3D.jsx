@@ -14,7 +14,7 @@ function PortView() {
                 <SetupScene />
                 <Suspense fallback={null}>
                     <Center top position={[-0.5, -0.5, 0]} rotation={[0, 0, 0]}>
-                        <CapillaJesusDelRio />
+                        <CapillaJesusDelRio scale={0.5} />
                         {/* <ExSanFrancisco scale={ 0.5 } /> */}
                     </Center>
                 </Suspense>
