@@ -62,7 +62,7 @@ body {
   position: fixed;
   width: 2em;
   height: 2em;
-  margin: 5rem;
+  margin: 3rem;
   padding: 2rem;
   background: #f4f4f4;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -171,8 +171,20 @@ body {
     order: 2;
   }
   .info-card.expanded {
-    max-width: 11rem;
-    margin: 1rem;
+    margin-top: 2rem;
+  }
+  .info-card.expanded .toggle-icon {
+    top: 2%;
+    right: 45%;
+  }
+  .info-card .card-content .card-title {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 384px) {
+  .info-card.expanded {
+    max-width: 17rem;
+    margin: 1.5rem;
     margin-top: 2rem;
   }
   .info-card.expanded .toggle-icon {
