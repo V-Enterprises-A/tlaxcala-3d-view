@@ -58,6 +58,108 @@ body {
   margin: 1.5dvw;
 }
 
+.info-card {
+  position: fixed;
+  width: 2em;
+  height: 2em;
+  margin: 5rem;
+  padding: 2rem;
+  background: #f4f4f4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 64px;
+  -webkit-border-radius: 64px;
+  -moz-border-radius: 64px;
+  -ms-border-radius: 64px;
+  -o-border-radius: 64px;
+  transition: width 0.1s ease, max-width 0.4s ease, height 0.4s ease, max-height 0.4s ease, padding 0.4s ease, border-radius 0.4s ease;
+  -webkit-transition: width 0.1s ease, max-width 0.4s ease, height 0.4s ease, max-height 0.4s ease, padding 0.4s ease, border-radius 0.4s ease;
+  -moz-transition: width 0.1s ease, max-width 0.4s ease, height 0.4s ease, max-height 0.4s ease, padding 0.4s ease, border-radius 0.4s ease;
+  -ms-transition: width 0.1s ease, max-width 0.4s ease, height 0.4s ease, max-height 0.4s ease, padding 0.4s ease, border-radius 0.4s ease;
+  -o-transition: width 0.1s ease, max-width 0.4s ease, height 0.4s ease, max-height 0.4s ease, padding 0.4s ease, border-radius 0.4s ease;
+}
+.info-card.expanded {
+  width: 50rem;
+  max-width: 50rem;
+  height: fit-content;
+  max-height: 50%;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.info-card.expanded .card-content {
+  max-height: 500px;
+  padding-top: 3rem;
+  opacity: 1;
+  transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
+  -webkit-transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
+  -moz-transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
+  -ms-transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
+  -o-transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
+}
+.info-card.expanded .toggle-icon {
+  position: absolute;
+  top: 10%;
+  right: 50%;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+.info-card.expanded .toggle-icon img {
+  height: 32px;
+  width: 32px;
+}
+.info-card .toggle-icon {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.info-card .toggle-icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 64px;
+  width: 64px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.info-card .toggle-icon img:hover {
+  filter: drop-shadow(0px 0px 2mm rgb(41, 133, 253));
+  -webkit-filter: drop-shadow(0px 0px 2mm rgb(41, 133, 253));
+}
+.info-card .card-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.info-card .card-content .card-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+.info-card .card-content .card-description {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0.5rem;
+}
+
 @media (min-width: 270px) {
   #ChurchView {
     flex-direction: column;
@@ -70,6 +172,14 @@ body {
   .ViewPort {
     order: 2;
   }
+  .info-card.expanded {
+    max-width: 11rem;
+    margin: 1rem;
+    margin-top: 2rem;
+  }
+  .info-card .card-content .card-title {
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 384px) {
   .InfoBar {
@@ -77,12 +187,22 @@ body {
     width: 65dvw;
     font-size: 9px;
   }
+  .info-card.expanded {
+    max-width: 18rem;
+    margin: 1rem;
+    margin-top: 4rem;
+  }
 }
 @media (min-width: 410px) {
   .InfoBar {
     order: 1;
     width: 70dvw;
     font-size: 12px;
+  }
+  .info-card.expanded {
+    max-width: 17rem;
+    margin: 2.5rem;
+    margin-top: 5rem;
   }
 }
 /* 
@@ -98,6 +218,9 @@ body {
     width: 85dvw;
     font-size: medium;
   }
+  .info-card.expanded {
+    max-width: 40rem;
+  }
 }
 @media (min-width: 1200px) {
   #ChurchView {
@@ -110,6 +233,19 @@ body {
   .ViewPort {
     order: 2;
     width: 70dvw;
+  }
+  .info-card.expanded {
+    max-width: 50rem;
+  }
+  .info-card .toggle-icon img {
+    height: 64px;
+    width: 64px;
+  }
+  .info-card .card-content .card-title {
+    font-size: 1.5rem;
+  }
+  .info-card .card-content .card-description {
+    font-size: 0.95rem;
   }
 }
 

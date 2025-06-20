@@ -11,7 +11,24 @@
 
   .ViewPort {
     order: 2;
-    
+
+  }
+
+  .info-card {
+
+    &.expanded {
+      max-width: 11rem;
+      margin: 1rem;
+      margin-top: 2rem;
+    }
+
+    .card-content {
+      .card-title {
+        font-size: 1.2rem;
+      }
+    }
+
+
   }
 }
 
@@ -21,6 +38,18 @@
     width: 65dvw;
     font-size: 9px;
   }
+
+  .info-card {
+
+    &.expanded {
+      max-width: 18rem;
+      margin: 1rem;
+      margin-top: 4rem;
+    }
+
+
+  }
+
 }
 
 @media (min-width: 410px) {
@@ -29,6 +58,16 @@
     order: 1;
     width: 70dvw;
     font-size: 12px;
+  }
+
+  .info-card {
+
+    &.expanded {
+      max-width: 17rem;
+      margin: 2.5rem;
+      margin-top: 5rem;
+    }
+
   }
 }
 
@@ -45,6 +84,15 @@
     width: 85dvw;
     font-size: medium;
   }
+
+  .info-card {
+
+    &.expanded {
+      max-width: 40rem;
+    }
+
+
+  }
 }
 
 @media (min-width: 1200px) {
@@ -60,5 +108,32 @@
   .ViewPort {
     order: 2;
     width: 70dvw;
+  }
+
+  .info-card {
+
+    &.expanded {
+      max-width: 50rem;
+    }
+
+    .toggle-icon {
+
+
+      img {
+        height: 64px;
+        width: 64px;
+      }
+    }
+
+    .card-content {
+
+      .card-title {
+        font-size: 1.5rem;
+      }
+
+      .card-description {
+        font-size: 0.95rem;
+      }
+    }
   }
 }
