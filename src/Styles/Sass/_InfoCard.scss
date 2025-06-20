@@ -23,7 +23,7 @@
         width: 50rem;
         max-width: 50rem;
         height: fit-content;
-        max-height: 50%;
+        max-height: fit-content;
         border-radius: 25px;
         -webkit-border-radius: 25px;
         -moz-border-radius: 25px;
@@ -31,7 +31,6 @@
         -o-border-radius: 25px;
 
         .card-content {
-            max-height: 500px;
             padding-top: 3rem;
             opacity: 1;
             transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
@@ -94,7 +93,7 @@
     }
 
     .card-content {
-        max-height: 0;
+        // max-height: 0;
         overflow: hidden;
         opacity: 0;
 

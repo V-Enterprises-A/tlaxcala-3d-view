@@ -83,7 +83,7 @@ body {
   width: 50rem;
   max-width: 50rem;
   height: fit-content;
-  max-height: 50%;
+  max-height: fit-content;
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -91,7 +91,6 @@ body {
   -o-border-radius: 25px;
 }
 .info-card.expanded .card-content {
-  max-height: 500px;
   padding-top: 3rem;
   opacity: 1;
   transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
@@ -144,7 +143,6 @@ body {
   -webkit-filter: drop-shadow(0px 0px 2mm rgb(41, 133, 253));
 }
 .info-card .card-content {
-  max-height: 0;
   overflow: hidden;
   opacity: 0;
 }
@@ -177,6 +175,10 @@ body {
     margin: 1rem;
     margin-top: 2rem;
   }
+  .info-card.expanded .toggle-icon {
+    top: 2%;
+    right: 45%;
+  }
   .info-card .card-content .card-title {
     font-size: 1.2rem;
   }
@@ -204,14 +206,16 @@ body {
     margin: 2.5rem;
     margin-top: 5rem;
   }
-}
-/* 
-@media (min-width: 600px) {
-  #root {
-    flex-direction: column;
+  .info-card.expanded .toggle-icon {
+    top: 5%;
+    right: 45%;
   }
 }
-*/
+@media (min-width: 600px) {
+  .info-card.expanded {
+    max-width: 28rem;
+  }
+}
 @media (min-width: 768px) {
   .InfoBar {
     order: 1;

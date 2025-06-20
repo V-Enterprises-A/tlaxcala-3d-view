@@ -20,6 +20,11 @@
       max-width: 11rem;
       margin: 1rem;
       margin-top: 2rem;
+
+      .toggle-icon {
+        top: 2%;
+        right: 45%;
+      }
     }
 
     .card-content {
@@ -66,18 +71,28 @@
       max-width: 17rem;
       margin: 2.5rem;
       margin-top: 5rem;
+
+      .toggle-icon {
+        top: 5%;
+        right: 45%;
+      }
     }
 
   }
 }
 
-/* 
+
 @media (min-width: 600px) {
-  #root {
-    flex-direction: column;
+  .info-card {
+
+    &.expanded {
+      max-width: 28rem;
+    }
+
+
   }
 }
-*/
+
 @media (min-width: 768px) {
   .InfoBar {
     order: 1;
