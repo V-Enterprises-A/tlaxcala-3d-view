@@ -42,14 +42,13 @@ export function CapillaJesusDelRio(props) {
         <mesh geometry={nodes.Mesh_28.geometry} material={materials._1} />
         <mesh geometry={nodes.Mesh_29.geometry} material={materials.Stone_Pavers_Flagstone_Gray} />
         <mesh geometry={nodes.Mesh_30.geometry} material={materials._Stone_Brushed_Khaki_2} />
-        <mesh geometry={nodes.Mesh_31.geometry} material={materials._2} />
+        <mesh geometry={nodes.Mesh_31.geometry} material={nodes.Mesh_31.material} />
         <mesh geometry={nodes.Mesh_32.geometry} material={materials.Stone_Vein_Gray} />
-        <mesh geometry={nodes.Mesh_33.geometry} material={materials._3} />
+        <mesh geometry={nodes.Mesh_33.geometry} material={nodes.Mesh_33.material} />
         <mesh geometry={nodes.Mesh_34.geometry} material={materials.M_0137_Black} />
         <mesh geometry={nodes.Mesh_35.geometry} material={materials.M_0130_Gainsboro} />
       </group>
-      <mesh geometry={nodes.muroLogos.geometry} material={materials.M_muroLogos} position={[-0.519, 0.17, 5.731]} rotation={[-Math.PI, 0, -Math.PI]} />
-      {/* <mesh geometry={nodes.pisoConInfo.geometry} material={materials['capillaJesus del rio']} position={[0.013, 0, 0.043]} rotation={[-Math.PI, 0, -Math.PI]} /> */}
+      <mesh geometry={nodes.muroLogos.geometry} material={materials['M_muroLogos.001']} position={[-0.522, 0.17, 5.841]} rotation={[Math.PI / 2, 0, Math.PI]} />
     </group>
   )
 }

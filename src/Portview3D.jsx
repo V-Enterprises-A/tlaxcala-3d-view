@@ -37,7 +37,7 @@ function SetupScene() {
             <ambientLight intensity={0.1}/>
             <directionalLight position={[0, 30,20 ]} castShadow intensity={Math.PI / 1.5}/>
             {/* <spotLight color={0xF6FF00} position={[-1, 8, 10]} angle={0.04} penumbra={1} decay={0} intensity={Math.PI / 1.5} /> */}
-            <OrbitControls enablePan={false} minPolarAngle={0} maxPolarAngle={Math.PI / 2.25} dampingFactor={0.03} />
+            <OrbitControls enablePan={false} minPolarAngle={0} maxPolarAngle={Math.PI / 2.25} dampingFactor={0.05} />
             {/* <Environment preset='forest'  /> */}
             <ContactShadows position={[0, -0.5, 0]} opacity={.8} blur={1} far={10} resolution={256} color={"#1C2E3A"} />
         </>

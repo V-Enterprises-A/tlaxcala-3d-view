@@ -4,6 +4,7 @@
     height: 2em;
     margin: 3rem;
     padding: 2rem;
+    
     background: #f4f4f4;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -24,6 +25,7 @@
         max-width: 50rem;
         height: fit-content;
         max-height: fit-content;
+        overflow-y: scroll hidden;
         border-radius: 25px;
         -webkit-border-radius: 25px;
         -moz-border-radius: 25px;
@@ -42,7 +44,7 @@
 
         .toggle-icon {
             position: absolute;
-            top: 10%;
+            top: 1rem;
             right: 50%;
             display: inline-block;
             width: 32px;

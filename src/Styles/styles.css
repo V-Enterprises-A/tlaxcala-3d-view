@@ -84,6 +84,7 @@ body {
   max-width: 50rem;
   height: fit-content;
   max-height: fit-content;
+  overflow-y: scroll hidden;
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -101,7 +102,7 @@ body {
 }
 .info-card.expanded .toggle-icon {
   position: absolute;
-  top: 10%;
+  top: 1rem;
   right: 50%;
   display: inline-block;
   width: 32px;
@@ -174,7 +175,6 @@ body {
     margin-top: 2rem;
   }
   .info-card.expanded .toggle-icon {
-    top: 2%;
     right: 45%;
   }
   .info-card .card-content .card-title {
@@ -188,7 +188,6 @@ body {
     margin-top: 2rem;
   }
   .info-card.expanded .toggle-icon {
-    top: 2%;
     right: 45%;
   }
   .info-card .card-content .card-title {
@@ -219,7 +218,6 @@ body {
     margin-top: 5rem;
   }
   .info-card.expanded .toggle-icon {
-    top: 5%;
     right: 45%;
   }
 }
