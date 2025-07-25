@@ -5,7 +5,8 @@ import { clamp } from 'three/src/math/MathUtils.js';
 import { ModelToView } from './Churchs/ModelToView';
 import { useDispatch, useSelector } from 'react-redux';
 import { getChurch, ObjLoaded } from './Store/slices/churchs';
-    
+// import { CapillaJesusDelRio } from './Churchs/CapillaJesusDelRio';
+
 function PortView() {
     
     const { isPreload } = useSelector(state => state.DataChurch);
@@ -15,8 +16,6 @@ function PortView() {
     useEffect(() => {
         dispatch(getChurch());        
     },[])
-
-
     return (
         <>
             <Canvas className='ViewPort animate__fadeIn ' shadows flat gl={{ antialias: true }} camera={{ position: [0, 1.5, 5.5], fov: 60 }} >

@@ -4,11 +4,10 @@ import { createSlice } from '@reduxjs/toolkit';
 export const churchSlice = createSlice({
     name: 'DataChurch',
     initialState: {
-        id: 0,
-        Name: 'Iglesia X',
-        Information: 'Information X',
-        PathToModel: 'path',
-        ModelStruct: '<></>',
+        id: 2,
+        Name: 'Capilla Jesus del Rio',
+        Information: 'Situada en una tranquila esquina del centro histórico, la Capilla Jesús del Río es una joya poco conocida que ofrece una experiencia íntima con el pasado colonial de Tlaxcala. Aunque modesta en tamaño, su arquitectura de influencia renacentista y su cúpula sobre el crucero la convierten en un espacio singular y armonioso.\r\rEsta capilla ha sido un punto de reunión espiritual durante siglos, y su atmósfera serena invita a la contemplación y la pausa. El interior, sencillo pero acogedor, conserva una sensación de recogimiento difícil de encontrar en otras construcciones más concurridas.',
+        PathToModel: './models/exConventoSF.glb',
         isPreload: false,
         isLoadingData: false
     },
@@ -19,7 +18,6 @@ export const churchSlice = createSlice({
             state.Name = action.payload.Name;
             state.Information = action.payload.Information;
             state.PathToModel = action.payload.PathToModel;
-            state.ModelStruct = action.ModelStruct; 
             state.isLoadingData = false;
         },
         ChangeData: (state) => {
@@ -28,10 +26,10 @@ export const churchSlice = createSlice({
         },
         ObjPreload: (state) => {
             state.isPreload = true;
-            // useGLTF.preload(state.PathToModel);
+            useGLTF.preload(state.PathToModel);
         },
         ObjLoaded: (state) => {
-            state.isPreload = false;            
+            state.isPreload = false;
         },
         LoadingChurchData: (state) => {
             state.isLoadingData = true;
@@ -40,4 +38,4 @@ export const churchSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const {LoadingChurchData, SetChurchData, ChangeData, ObjPreload, ObjLoaded } = churchSlice.actions;
+export const { LoadingChurchData, SetChurchData, ChangeData, ObjPreload, ObjLoaded } = churchSlice.actions;
