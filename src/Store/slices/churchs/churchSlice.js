@@ -1,24 +1,25 @@
-import { Preload, useGLTF } from '@react-three/drei';
+import { useGLTF } from '@react-three/drei';
 import { createSlice } from '@reduxjs/toolkit';
 
 export const churchSlice = createSlice({
     name: 'DataChurch',
     initialState: {
-        id: 2,
-        Name: 'Capilla Jesus del Rio',
-        Information: 'Situada en una tranquila esquina del centro histórico, la Capilla Jesús del Río es una joya poco conocida que ofrece una experiencia íntima con el pasado colonial de Tlaxcala. Aunque modesta en tamaño, su arquitectura de influencia renacentista y su cúpula sobre el crucero la convierten en un espacio singular y armonioso.\r\rEsta capilla ha sido un punto de reunión espiritual durante siglos, y su atmósfera serena invita a la contemplación y la pausa. El interior, sencillo pero acogedor, conserva una sensación de recogimiento difícil de encontrar en otras construcciones más concurridas.',
-        PathToModel: './models/exConventoSF.glb',
+        id: 1,
+        Name: '',
+        Information: '',
+        PathToModel: '',
         isPreload: false,
-        isLoadingData: false
+        isLoadingData: false,
+        exist:false
     },
     reducers: {
         SetChurchData: (state, action) => {
-            // console.log(action);
-            // state.id = action.payload.id;
+            state.id = action.payload.id;
             state.Name = action.payload.Name;
             state.Information = action.payload.Information;
             state.PathToModel = action.payload.PathToModel;
             state.isLoadingData = false;
+            state.exist = true;
         },
         ChangeData: (state) => {
             state.Name = 'Iglesia Y';
@@ -34,6 +35,13 @@ export const churchSlice = createSlice({
         LoadingChurchData: (state) => {
             state.isLoadingData = true;
         },
+        NextChurch: (state) => {
+            state.id = state.id + 1
+        },
+        PrevChurch: (state) => {
+            state.id > 1 ? state.id = state.id - 1 : state.id = 1;
+        }
+
     },
 })
 

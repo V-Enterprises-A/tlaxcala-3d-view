@@ -7,11 +7,14 @@ const InfoCard = () => {
 
     const [expanded, setExpanded] = useState(false);
     const toggleCard = () => setExpanded(prev => !prev);
-
+    const {exist} = useSelector(state => state.DataChurch);
     const { Name, Information } = useSelector(state => state.DataChurch);
 
 
     return (
+    <>
+
+        {exist ?
         <div className={`info-card ${expanded ? 'expanded' : ''}`}>
 
             <div className="toggle-icon" onClick={toggleCard}>
@@ -24,6 +27,10 @@ const InfoCard = () => {
             </div>
 
         </div>
+        :
+        <></>
+        }
+    </>
     );
 };
 

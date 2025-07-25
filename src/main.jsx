@@ -1,23 +1,20 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import PortView from './Portview3D.jsx'
 import './Styles/styles.css'
-import InfoCard from './InfoCard.jsx'
 import { Provider } from 'react-redux'
 import { store } from './Store'
-import { App } from './App'
-import PokemonAPP from './PokemonAPP'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Home } from './Home'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Provider store={store}>
 
-      <div id='ChurchView' >
-        {/* <PokemonAPP></PokemonAPP>  */}
-        <InfoCard></InfoCard>
-        <PortView></PortView>
-      </div>
-      
-    </Provider>
+  <StrictMode>
+    <BrowserRouter>
+      <Provider store={store}>
+          <Routes>
+            <Route exact path="/:church" element={<Home/>} />
+          </Routes>
+      </Provider>
+    </BrowserRouter>
   </StrictMode>,
 )

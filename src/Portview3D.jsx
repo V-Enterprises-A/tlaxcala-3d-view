@@ -5,16 +5,17 @@ import { clamp } from 'three/src/math/MathUtils.js';
 import { ModelToView } from './Churchs/ModelToView';
 import { useDispatch, useSelector } from 'react-redux';
 import { getChurch, ObjLoaded } from './Store/slices/churchs';
-// import { CapillaJesusDelRio } from './Churchs/CapillaJesusDelRio';
+import { useSearchParams } from 'react-router-dom';
 
 function PortView() {
     
-    const { isPreload } = useSelector(state => state.DataChurch);
-
     const dispatch = useDispatch();
+    const { exist } = useSelector(state => state.DataChurch);
+    const [searchParams] = useSearchParams();
+    const church = searchParams.get('church');
 
     useEffect(() => {
-        dispatch(getChurch());        
+        dispatch(getChurch(church));        
     },[])
     return (
         <>
@@ -23,7 +24,7 @@ function PortView() {
                 <Suspense fallback={''} >
                     <Center top position={[-0.5, -0.5, 0]} rotation={[0, 0, 0]}>
                         {
-                            !isPreload ? <ModelToView></ModelToView> : <></>
+                            exist ? <ModelToView></ModelToView> : <></> 
                         }
                     </Center>
                 </Suspense>
