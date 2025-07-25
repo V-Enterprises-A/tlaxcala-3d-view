@@ -1,21 +1,31 @@
-import { Suspense } from 'react'
+import { Suspense, useEffect } from 'react'
 import { Canvas, useThree } from "@react-three/fiber";
 import { Center, ContactShadows, Environment, OrbitControls, PerspectiveCamera } from "@react-three/drei";
-import { CapillaJesusDelRio } from "./Churchs/CapillaJesusDelRio";
 import { clamp } from 'three/src/math/MathUtils.js';
-import { ExSanFrancisco } from './Churchs/ExConventoSF';
-
+import { ModelToView } from './Churchs/ModelToView';
+import { useDispatch, useSelector } from 'react-redux';
+import { getChurch, ObjLoaded } from './Store/slices/churchs';
+    
 function PortView() {
+    
+    const { isPreload } = useSelector(state => state.DataChurch);
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getChurch());        
+    },[])
 
 
     return (
         <>
             <Canvas className='ViewPort animate__fadeIn ' shadows flat gl={{ antialias: true }} camera={{ position: [0, 1.5, 5.5], fov: 60 }} >
                 <SetupScene />
-                <Suspense fallback={null} >
+                <Suspense fallback={''} >
                     <Center top position={[-0.5, -0.5, 0]} rotation={[0, 0, 0]}>
-                        <CapillaJesusDelRio scale={0.5}/>
-                        {/* <ExSanFrancisco scale={ 0.5 } /> */}
+                        {
+                            !isPreload ? <ModelToView></ModelToView> : <></>
+                        }
                     </Center>
                 </Suspense>
             </Canvas>
@@ -34,8 +44,8 @@ function SetupScene() {
     return (
         <>
             <PerspectiveCamera makeDefault position={[0, 1.5, 5.5]} fov={newFOV} />
-            <ambientLight intensity={0.1}/>
-            <directionalLight position={[0, 30,20 ]} castShadow intensity={Math.PI / 1.5}/>
+            <ambientLight intensity={0.1} />
+            <directionalLight position={[0, 30, 20]} castShadow intensity={Math.PI / 1.5} />
             {/* <spotLight color={0xF6FF00} position={[-1, 8, 10]} angle={0.04} penumbra={1} decay={0} intensity={Math.PI / 1.5} /> */}
             <OrbitControls enablePan={false} minPolarAngle={0} maxPolarAngle={Math.PI / 2.25} dampingFactor={0.05} />
             {/* <Environment preset='forest'  /> */}
