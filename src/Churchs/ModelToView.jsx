@@ -8,7 +8,7 @@ import { models } from './models';
 export function ModelToView(props) {
 
   const {PathToModel, id} = useSelector(state => state.DataChurch);
-  const { nodes, materials } = useGLTF(PathToModel);
+  const { nodes, materials } = useGLTF(PathToModel);  
   const MaterialComponent = models[id];  
   
   return (

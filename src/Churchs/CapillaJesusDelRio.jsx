@@ -6,8 +6,8 @@ Command: npx gltfjsx@6.5.3 ../../public/models/CapillaJesusDelRio.glb ./
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function CapillaJesusDelRio(props) {
-  const { nodes, materials } = useGLTF('./models/CapillaJesusDelRio.glb')
+export function Model(props) {
+  const { nodes, materials } = useGLTF('/CapillaJesusDelRio.glb')
   return (
     <group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, -Math.PI]} scale={0.301}>
@@ -53,4 +53,4 @@ export function CapillaJesusDelRio(props) {
   )
 }
 
-useGLTF.preload('./models/CapillaJesusDelRio.glb')
+useGLTF.preload('/CapillaJesusDelRio.glb')
