@@ -2,7 +2,7 @@ import React from 'react'
 
 function C2({ nodes, materials, ...props }) {
     return (
-        <>
+        
             <group {...props} dispose={null}>
                 <group position={[1.792, 0, -4.491]} rotation={[Math.PI / 2, 0, -0.315]} scale={0.103}>
                     <mesh geometry={nodes.Mesh.geometry} material={materials._15} />
@@ -80,7 +80,7 @@ function C2({ nodes, materials, ...props }) {
                 </group>
                 <mesh geometry={nodes.muroLogos.geometry} material={materials['M_muroLogos.002']} position={[0, 0, -1.94]} rotation={[Math.PI / 2, 0, -Math.PI]} />
             </group>
-        </>
+        
     )
 }
 

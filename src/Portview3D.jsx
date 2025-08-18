@@ -44,7 +44,7 @@ function SetupScene() {
     return (
         <>
             <PerspectiveCamera makeDefault position={[0, 1.5, 5.5]} fov={newFOV} />
-            <ambientLight intensity={0.1} />
+            <ambientLight intensity={0.5} />
             <directionalLight position={[0, 30, 20]} castShadow intensity={Math.PI / 1.5} />
             {/* <spotLight color={0xF6FF00} position={[-1, 8, 10]} angle={0.04} penumbra={1} decay={0} intensity={Math.PI / 1.5} /> */}
             <OrbitControls enablePan={false} minPolarAngle={0} maxPolarAngle={Math.PI / 2.25} dampingFactor={0.05} />
