@@ -12,6 +12,7 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Provider store={store}>
           <Routes>
+            <Route exact path="/" element={<Home/>} />
             <Route exact path="/:church" element={<Home/>} />
           </Routes>
       </Provider>
