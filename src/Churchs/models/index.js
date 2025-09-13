@@ -10,6 +10,12 @@ import C9 from './C9';
 import C10 from './C10';
 import C11 from './C11';
 import C12 from './C12';
+import C13 from './C13';
+import C14 from './C14';
+import C15 from './C15';
+import C16 from './C16';
+import C17 from './C17';
+
 
 export const models = {
     1:C1,
@@ -23,7 +29,12 @@ export const models = {
     9:C9,
     10:C10,
     11:C11,
-    12:C12,
+    12: C12,
+    13: C13,
+    14: C14,
+    15: C15,
+    16: C16,
+    17: C17
 };
 
 // O también puedes exportarlos individualmente si los necesitas así
